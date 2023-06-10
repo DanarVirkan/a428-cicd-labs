@@ -1,6 +1,6 @@
 node {
     stage('Build') {
-        docker.image('node:18.16.0-alpine').inside {
+        docker.image('node:18.16.0-alpine').withRun("-p 3000:3000").inside {
             sh 'node --version'
             sh 'npm install'
         }
