@@ -1,4 +1,5 @@
 node {
+    checkout scm
     docker.image('node:18.16.0-alpine').inside {
         stage('Build') {
                 sh 'node --version'
