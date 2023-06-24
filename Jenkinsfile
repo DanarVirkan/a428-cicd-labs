@@ -13,5 +13,13 @@ node {
             input message: 'Finished using the web site? (Click "Proceed" to continue)'
             sh './jenkins/scripts/kill.sh'
         }
+        stage('Manual Approval') {
+            echo 'Mock Continous Delivery'
+            input(message: "Lanjutkan ke tahap Deploy?")
+        }
+        stage('Deploy') {
+            echo 'Mock Deploy'
+            sleep 1000 * 60
+        }
     }
 }
