@@ -19,7 +19,7 @@ node {
         }
         stage('Deploy') {
             echo 'Mock Deploy'
-            sleep 1000 * 60
+            sleep(1, MINUTES)
         }
     }
 }
